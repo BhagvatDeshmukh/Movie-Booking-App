@@ -9,7 +9,7 @@ function ConfirmBooking() {
   let { mname, tname, showid, sdate, stime, cost, seats } = useParams();
   // console.log(seats);
   // console.log("de")
-  let apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
+  let apiurl = 'https://movie-booking-app-backend-5hre.onrender.com';
   const [msg, SetMsg] = useState(false)
   const [message, SetMessage] = useState()
   const navigate = useNavigate();

@@ -15,7 +15,7 @@ export default function FreesoloMovie() {
   let{apiurl}=React.useContext(context);
   React.useEffect(() => {
     try {
-      axios(`http://${apiurl}:3000/getmovies`).then((response) => {
+      axios(`${apiurl}/getmovies`).then((response) => {
         setMovieNames(response.data);
       });
     } catch (error) {

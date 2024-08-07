@@ -9,7 +9,7 @@ function ConfirmBooking() {
   let { mname, tname, showid, sdate, stime, cost, seats } = useParams();
   // console.log(seats);
   // console.log("de")
-  let apiurl = '172.17.0.217';
+  let apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
   const [msg, SetMsg] = useState(false)
   const [message, SetMessage] = useState()
   const navigate = useNavigate();
@@ -18,12 +18,12 @@ function ConfirmBooking() {
   let redirect = [{ redirect: location.pathname }];
   useEffect(() => {
     try {
-      axios.post(`http://${apiurl}:3000/verify`, { token: localStorage.getItem('token') }).then((response) => {
+      axios.post(`${apiurl}/verify`, { token: localStorage.getItem('token') }).then((response) => {
         if (response.data.user) {
           SetUser(response.data.user);
           //  console.log("api")
           try {
-            axios.post(`http://${apiurl}:3000/insertintopb`, { userid: response.data.user.userid, showid: showid, seats: seats.split(',') })
+            axios.post(`${apiurl}/insertintopb`, { userid: response.data.user.userid, showid: showid, seats: seats.split(',') })
               .then((res) => {
 
                 if (res.data.err) {
@@ -49,7 +49,7 @@ function ConfirmBooking() {
 
   async function handleBook(){
     try {
-      axios.post(`http://${apiurl}:3000/book`, { token: localStorage.getItem('token'), showid: showid, seats: seats.split(',') })
+      axios.post(`${apiurl}/book`, { token: localStorage.getItem('token'), showid: showid, seats: seats.split(',') })
               .then((res) => {
 
                 if (res.data.err) {

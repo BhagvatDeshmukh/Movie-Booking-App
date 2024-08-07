@@ -11,7 +11,7 @@ export default function ControllableStates({setShowLocation}) {
 
   React.useEffect(()=>{
     try {
-      axios(`http://${apiurl}:3000/getcities`).then((response)=>{
+      axios(`${apiurl}/getcities`).then((response)=>{
         console.log(response.data);
         let arr=[];
         response.data.forEach(city=>{arr.push(city.cityname)});

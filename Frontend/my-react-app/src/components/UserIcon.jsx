@@ -64,7 +64,7 @@ export default function AccountMenu() {
     };
     function handleLogout () {
       try {
-        axios.post(`http://${apiurl}:3000/logout`,{token:localStorage.getItem('token')}).then((response) => {
+        axios.post(`${apiurl}/logout`,{token:localStorage.getItem('token')}).then((response) => {
           {
             let token=response.data.token;
             // console.log(token)

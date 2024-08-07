@@ -25,7 +25,7 @@ function LoginFinal() {
   function handleSubmit(e){
     e.preventDefault();
     try {
-      axios.post(`http://${apiurl}:3000/login`,data).then((response) => {
+      axios.post(`${apiurl}/login`,data).then((response) => {
         let token;
         console.log(redirect);
         if(response.data.token){
@@ -127,7 +127,7 @@ function SignUpFinal() {
     e.preventDefault();
     // console.log(data);
     try {
-        axios.post(`http://${apiurl}:3000/register`,data).then((response) => {
+        axios.post(`${apiurl}/register`,data).then((response) => {
           let token;
           if(response.data.token){
             token=response.data.token;

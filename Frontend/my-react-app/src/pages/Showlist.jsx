@@ -24,7 +24,7 @@ function Showlist() {
 
   useEffect(() => {
     try {
-      axios.get(`http://${apiurl}:3000/showlist`, {
+      axios.get(`${apiurl}/showlist`, {
         params: {
           'city': city,
           'mid': mid,
@@ -41,7 +41,7 @@ function Showlist() {
 
   useEffect(() => {
     try {
-      axios(`http://${apiurl}:3000/getmovieDetails/${mid}`).then((response) => {
+      axios(`${apiurl}/getmovieDetails/${mid}`).then((response) => {
         setMname(response.data[0].moviename);
 
       });

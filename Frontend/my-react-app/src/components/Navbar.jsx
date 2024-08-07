@@ -18,7 +18,7 @@ function Navbar() {
   useEffect(()=>{
     try {
       // console.log({token:localStorage.getItem('token')});
-      axios.post(`http://${apiurl}:3000/verify`,{token:localStorage.getItem('token')}).then((response) => {
+      axios.post(`${apiurl}/verify`,{token:localStorage.getItem('token')}).then((response) => {
         if(response.data.user){
           setIsAuthenticated(true);
           SetUser(response.data.user)

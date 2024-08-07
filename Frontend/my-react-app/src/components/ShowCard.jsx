@@ -14,7 +14,7 @@ function ShowCard({show}) {
         "price":""
     }]) ;
     const showid=Object.keys(show)[0];
-    const apiurl = '172.17.0.217';
+    const apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
     
     // [
         
@@ -22,7 +22,7 @@ function ShowCard({show}) {
     useEffect(()=>{
         try {
             // console.log("d")
-          axios(`http://${apiurl}:3000/getShowDetails/${showid}`).then((response)=>{
+          axios(`${apiurl}/getShowDetails/${showid}`).then((response)=>{
           SetData(response.data);
           });
         } catch (error) {

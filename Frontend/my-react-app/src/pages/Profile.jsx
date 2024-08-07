@@ -7,7 +7,7 @@ import context from '../storedContexts';
 import ShowCard from '../components/ShowCard';
 
 function Profile() {
-    let apiurl = '172.17.0.217';
+    let apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
     const [user, SetUser] = useState('');
     let {setIsAuthenticated}=useContext(context)
     const navigate = useNavigate();
@@ -18,13 +18,13 @@ function Profile() {
 
     useEffect(() => {
         try {
-            axios.post(`http://${apiurl}:3000/verify`, { token: localStorage.getItem('token') }).then((response) => {
+            axios.post(`${apiurl}/verify`, { token: localStorage.getItem('token') }).then((response) => {
                 if (response.data.user) {
                     SetUser(response.data.user);
                     //  console.log(response.data.user.userid)
                     try {
                         // console.log(response.data.user.userid)
-                        axios.get(`http://${apiurl}:3000/getBookings`, {params:{ userid: response.data.user.userid}})
+                        axios.get(`${apiurl}/getBookings`, {params:{ userid: response.data.user.userid}})
                           .then((res) => {
                             // console.log(res.data)
                             SetData(res.data);
@@ -44,7 +44,7 @@ function Profile() {
     }, []);
     function handleLogout () {
         try {
-          axios.post(`http://${apiurl}:3000/logout`,{token:localStorage.getItem('token')}).then((response) => {
+          axios.post(`${apiurl}/logout`,{token:localStorage.getItem('token')}).then((response) => {
             {
               let token=response.data.token;
               // console.log(token)

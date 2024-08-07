@@ -50,7 +50,8 @@ function InCinemasSlider() {
   // console.log("ic")
   useEffect(()=>{
   try {
-    axios(`http://${apiurl}:3000/getmoviesbycity?city=${city}`).then((response)=>{
+    axios(`
+      ${apiurl}/getmoviesbycity?city=${city}`).then((response)=>{
     setMoviecityList(response.data);
     });
   } catch (error) {

@@ -22,7 +22,7 @@ function MoviePage() {
     );
     useEffect(() => {
         try {
-            axios(`http://${apiurl}:3000/getmovieDetails/${id}`).then((response) => {
+            axios(`${apiurl}/getmovieDetails/${id}`).then((response) => {
                 setData(response.data[0]);
             });
         } catch (error) {

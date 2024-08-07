@@ -49,7 +49,7 @@ function SwipeToSlide() {
 
   useEffect(()=>{
   try {
-    axios(`http://${apiurl}:3000/getmovies`).then((response)=>{
+    axios(`${apiurl}/getmovies`).then((response)=>{
     setMovieList(response.data);
     });
   } catch (error) {

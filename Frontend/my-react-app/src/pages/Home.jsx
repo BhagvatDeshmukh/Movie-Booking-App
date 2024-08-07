@@ -4,7 +4,7 @@ import PauseOnHover from '../components/PauseonHoverSlider'
 import SwipeToSlide from '../components/SwipeToSlide'
 import InCinemasSlider from '../components/InCinemasSlider'
 function Home() {
-    console.log("k")
+    // console.log("k")
     return (
         <div className='flex flex-col space-y-3' >
             

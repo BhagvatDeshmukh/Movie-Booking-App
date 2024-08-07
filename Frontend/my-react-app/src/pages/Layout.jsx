@@ -13,7 +13,7 @@ function Layout() {
   let [showLocation, setShowLocation] = useState(false);
   let [isAuthenticated, setIsAuthenticated] = useState(false);
   let [user, SetUser] = useState({ name: '', email: '' });
-  let apiurl = '172.17.0.217';
+  let apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
   let [IsSeatlayout, SetIsSeatlayout] = useState(true);
   useEffect(() => { if (city == '') setTimeout(() => { setShowLocation(true) }, 2000); }, []);
   // console.log("lo")

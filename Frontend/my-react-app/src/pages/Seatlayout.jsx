@@ -22,12 +22,12 @@ function Seatlayout() {
     useEffect(() => {
         try {
 
-            axios(`http://${apiurl}:3000/getSeatlayout/${showid}`).then((response) => {
+            axios(`${apiurl}/getSeatlayout/${showid}`).then((response) => {
 
                 setData(response.data[0]);
 
             }).then(() =>
-                axios(`http://${apiurl}:3000/getshowpricing/${showid}`).then((response) => {
+                axios(`${apiurl}/getshowpricing/${showid}`).then((response) => {
 
                     setPricing(response.data[0].price);
                     // console.log(response.data);

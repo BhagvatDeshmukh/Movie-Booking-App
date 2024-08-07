@@ -102,7 +102,7 @@ function LoginFinal() {
         </form>
         <div className="text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account? <NavLink to={"/SignUp"} state={{redirect:redirect}} className={`text-blue-500`}>Sign Up</NavLink>
+            Don't have an account? <NavLink to={"/SignUp"} state={[{redirect:redirect}]} className={`text-blue-500`}>Sign Up</NavLink>
           </p>
         </div>
       </div>
@@ -217,7 +217,7 @@ function SignUpFinal() {
         
         <div className="text-center">
           <p className="text-sm text-gray-600">
-            Already have an account? <NavLink to={"/SignIn"} state={{redirect:redirect}} className={`text-blue-500`}>Sign In</NavLink>
+            Already have an account? <NavLink to={"/SignIn"} state={[{redirect:redirect}]} className={`text-blue-500`}>Sign In</NavLink>
           </p>
         </div>
       </div>

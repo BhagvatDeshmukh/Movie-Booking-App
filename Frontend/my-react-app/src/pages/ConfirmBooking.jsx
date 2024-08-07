@@ -27,7 +27,7 @@ function ConfirmBooking() {
               .then((res) => {
 
                 if (res.data.err) {
-                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate(`seatLayout/${mname}/${tname}/${showid}/${sdate}/${stime}`), 2000);
+                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate(`/seatLayout/${mname}/${tname}/${showid}/${sdate}/${stime}`), 2000);
                 } else { SetMsg(false); }
                 // console.log(res);
 
@@ -53,7 +53,7 @@ function ConfirmBooking() {
               .then((res) => {
 
                 if (res.data.err) {
-                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate(`seatLayout/${mname}/${tname}/${showid}/${sdate}/${stime}`), 2000);
+                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate(`/seatLayout/${mname}/${tname}/${showid}/${sdate}/${stime}`), 2000);
                 } else { SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate("/"), 2000); }
                 // console.log(res);
 

@@ -12,7 +12,7 @@ const port = process.env.BASE_PORT || 3000;
 const saltRounds = 10;
 env.config();
 
-const corsWhitelist = ['http://localhost:5173', 'http://172.17.0.217:5173'];
+const corsWhitelist = ['https://movie-booking-app-frontend.onrender.com'];
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({

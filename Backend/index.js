@@ -26,6 +26,8 @@ app.use(cors({
 
 const db = new pg.Client({
   url: process.env.DEPLOYED_URL,
+  logging: false,
+  entities: [Student],
   ssl: {
     rejectUnauthorized: false,
   },

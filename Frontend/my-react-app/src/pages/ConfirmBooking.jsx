@@ -27,7 +27,7 @@ function ConfirmBooking() {
               .then((res) => {
 // `/seatLayout/${mname}/${tname}/${showid}/${sdate}/${stime}`
                 if (res.data.err) {
-                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate(-1), 2000);
+                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() =>{ if(this.props.history.location.pathname=="/SignIn" || this.props.history.location.pathname=="/SignUp")navigate(-2)else {navigate(-1)}}, 2000);
                 } else { SetMsg(false); }
                 // console.log(res);
 
@@ -53,7 +53,7 @@ function ConfirmBooking() {
               .then((res) => {
 
                 if (res.data.err) {
-                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate(-1), 2000);
+                  SetMsg(true); SetMessage(res.data.msg); setTimeout(() =>{ if(this.props.history.location.pathname=="/SignIn" || this.props.history.location.pathname=="/SignUp")navigate(-2)else {navigate(-1)}}, 2000);
                 } else { SetMsg(true); SetMessage(res.data.msg); setTimeout(() => navigate("/"), 2000); }
                 // console.log(res);
 

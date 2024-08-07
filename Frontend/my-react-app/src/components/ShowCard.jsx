@@ -14,7 +14,7 @@ function ShowCard({show}) {
         "price":""
     }]) ;
     const showid=Object.keys(show)[0];
-    const apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
+    const apiurl = 'https://movie-booking-app-backend-5hre.onrender.com';
     
     // [
         

@@ -7,7 +7,7 @@ import context from '../storedContexts';
 import ShowCard from '../components/ShowCard';
 
 function Profile() {
-    let apiurl = 'https://movie-booking-app-backend-ibq4.onrender.com';
+    let apiurl = 'https://movie-booking-app-backend-5hre.onrender.com';
     const [user, SetUser] = useState('');
     let {setIsAuthenticated}=useContext(context)
     const navigate = useNavigate();

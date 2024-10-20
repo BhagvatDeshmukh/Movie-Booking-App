@@ -16,8 +16,10 @@ function Navbar() {
     location.pathname.slice(0,11)=='/seatLayout' || location.pathname.slice(0,15)=='/confirmBooking' ?SetIsSeatlayout(false):SetIsSeatlayout(true);
   },)
   useEffect(()=>{
+    setTimeout(()=>{
     try {
       // console.log({token:localStorage.getItem('token')});
+      
       axios.post(`${apiurl}/verify`,{token:localStorage.getItem('token')}).then((response) => {
         if(response.data.user){
           setIsAuthenticated(true);
@@ -33,7 +35,7 @@ function Navbar() {
       
     } catch (error) {
       console.log(error);
-    }
+    }},5000);
   },[isAuthenticated]);
   // useEffect(()=>{
   //   try {

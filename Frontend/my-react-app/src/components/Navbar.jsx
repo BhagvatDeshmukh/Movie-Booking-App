@@ -14,7 +14,7 @@ function Navbar() {
   let redirect=[{redirect:location.pathname}];
   useEffect(()=>{
     location.pathname.slice(0,11)=='/seatLayout' || location.pathname.slice(0,15)=='/confirmBooking' ?SetIsSeatlayout(false):SetIsSeatlayout(true);
-    setTimeout(()=>console.log("hi"),10000);
+  
   },)
   useEffect(()=>{
     

@@ -16,7 +16,7 @@ function Navbar() {
     location.pathname.slice(0,11)=='/seatLayout' || location.pathname.slice(0,15)=='/confirmBooking' ?SetIsSeatlayout(false):SetIsSeatlayout(true);
   },)
   useEffect(()=>{
-    setTimeout(()=>{
+    
     try {
       // console.log({token:localStorage.getItem('token')});
       
@@ -35,7 +35,7 @@ function Navbar() {
       
     } catch (error) {
       console.log(error);
-    }},5000);
+    }
   },[isAuthenticated]);
   // useEffect(()=>{
   //   try {
